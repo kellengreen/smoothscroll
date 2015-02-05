@@ -1,8 +1,8 @@
 function smoothScroll(x, y, duration, easing) {
     if (window.requestAnimationFrame) {
 
-        duration = duration ? duration : 500;
-        easing = easing ? easing : function(original, change, time, duration) {
+        duration = duration || 500;
+        easing = easing || function(original, change, time, duration) {
             // cubic easing out
             time /= duration;
             time--;
